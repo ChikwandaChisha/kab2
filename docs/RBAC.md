@@ -4,23 +4,67 @@
 
 | Role | Description |
 |------|-------------|
-| User | Regular user who can send and receive messages |
-| Moderator | Can review flagged messages and manage restrictions |
-| Admin | Full system access and user management |
+| User | Regular platform members who can send and receive messages |
+| Moderator | Content oversight personnel with review and restriction capabilities |
+| Admin | System administrators with full management access |
 
-## Permission Matrix
+## Complete Permission Matrix
 
-| Action | User | Moderator | Admin |
-|--------|------|-----------|--------|
+| Action/Resource | User | Moderator | Admin |
+|-----------------|------|-----------|--------|
+| Authentication & Profile | | | |
+| Login/Logout | ✅ | ✅ | ✅ |
+| View Own Profile | ✅ | ✅ | ✅ |
+| Update Own Profile | ✅ | ✅ | ✅ |
+| Messaging | | | |
 | Send Message | ✅ | ✅ | ✅ |
 | Receive Message | ✅ | ✅ | ✅ |
+| Decrypt Own Messages | ✅ | ✅ | ✅ |
+| View Message Inbox | ✅ | ✅ | ✅ |
+| Content Moderation | | | |
 | Flag Message | ✅ | ✅ | ✅ |
 | View Flagged Messages | ❌ | ✅ | ✅ |
-| Review Flagged Messages | ❌ | ✅ | ✅ |
-| Create Restrictions | ❌ | ✅ | ✅ |
-| View Audit Logs | ❌ | ❌ | ✅ |
-| Manage Users | ❌ | ❌ | ✅ |
-| System Settings | ❌ | ❌ | ✅ |
+| Review Flagged Content | ❌ | ✅ | ✅ |
+| Approve/Dismiss Flags | ❌ | ✅ | ✅ |
+| Create Messaging Restrictions | ❌ | ✅ | ✅ |
+| Freeze Tokens | ❌ | ✅ | ✅ |
+| Access Mod Panel | ❌ | ✅ | ✅ |
+| User Management | | | |
+| View All Users | ❌ | ❌ | ✅ |
+| Manage User Roles | ❌ | ❌ | ✅ |
+| Suspend/Activate Users | ❌ | ❌ | ✅ |
+| Access Admin Console | ❌ | ❌ | ✅ |
+| Audit & Logging | | | |
+| View Own Activity Logs | ✅ | ✅ | ✅ |
+| View Moderation Logs | ❌ | ✅ | ✅ |
+| View Full Audit Logs | ❌ | ❌ | ✅ |
+| System Configuration | | | |
+| Manage System Settings | ❌ | ❌ | ✅ |
+| Rotate System Keys | ❌ | ❌ | ✅ |
+| Configure Policies | ❌ | ❌ | ✅ |
+
+## Navigation Access Control
+
+| Page/Route | User | Moderator | Admin |
+|------------|------|-----------|--------|
+| /messages | ✅ | ✅ | ✅ |
+| /send | ✅ | ✅ | ✅ |
+| /mod-panel | ❌ | ✅ | ✅ |
+| /admin-console | ❌ | ❌ | ✅ |
+
+Note: Moderators are automatically redirected to /mod-panel upon login, but can still access messaging pages if navigated to directly.
+
+## Database-Level Access Control (RLS Policies)
+
+| Table | User Access | Moderator Access | Admin Access |
+|-------|-------------|------------------|--------------|
+| messages | Own messages only | Own + flagged messages | All messages |
+| flagged_messages | Own flags only | All flagged messages | All flagged messages |
+| profiles | Own profile only | Own profile only | All profiles |
+| audit_logs | No direct access | Limited access (own actions) | Full access |
+| messaging_restrictions | No access | Can create/view | Full access |
+| user_bans | No access | Can view | Full access |
+| sender_flag_counts | No access | Can view/update | Full access |
 
 ## Threat Model
 
