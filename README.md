@@ -33,6 +33,12 @@ WhisperChain+ is an end-to-end encrypted messaging platform focused on privacy a
 - **Backend**: Supabase for authentication, database, and real-time subscriptions
 - **Build Tool**: Vite for fast development and optimized production builds
 
+## Documentation
+
+- [RBAC.md](docs/RBAC.md): Role-Based Access Control details and permissions.
+- [AUDIT_LOGS.md](docs/AUDIT_LOGS.md): Information about audit logging and review processes.
+- [SECURITY.md](docs/SECURITY.md): Security policies, practices, and considerations for the project.
+
 ## Getting Started
 
 ### Prerequisites
