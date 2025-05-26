@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 import { SignUp } from '@/components/SignUp';
+import Header from '@/components/Header';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -70,18 +71,7 @@ const Login = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
-      <div className="p-4 border-b border-gray-200 flex items-center">
-        <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center mr-3">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-white">
-            <path d="M15 11h.01"></path>
-            <path d="M11 15h.01"></path>
-            <path d="M16 16h.01"></path>
-            <path d="m2 16 20 6-6-20A20 20 0 0 0 2 16"></path>
-            <path d="M5.71 17.11a17.04 17.04 0 0 1 11.4-11.4"></path>
-          </svg>
-        </div>
-        <span className="text-xl font-bold">WhisperChain+</span>
-      </div>
+      <Header title="WhisperChain+" />
 
       <div className="flex flex-col items-center justify-center flex-grow p-4">
         <div className="flex flex-col items-center justify-center mb-8">
