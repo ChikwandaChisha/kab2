@@ -55,8 +55,10 @@ const Login = () => {
   const loginAsAdmin = async () => {
     setIsLoading(true);
     try {
-      // Use pre-set admin credentials
-      const success = await login('admin@example.com', 'admin123');
+      // Use environment variables for admin credentials
+      const adminEmail = import.meta.env.VITE_ADMIN_EMAIL || 'admin@example.com';
+      const adminPassword = import.meta.env.VITE_ADMIN_PASSWORD || 'admin123';
+      const success = await login(adminEmail, adminPassword);
       if (!success) {
         setIsLoading(false);
       }

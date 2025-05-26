@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from '@/components/ui/card';
 
 interface MessageContentProps {
@@ -40,7 +39,7 @@ export const MessageContent = ({
                 </div>
               ) : decryptedContent ? (
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <p className="text-gray-800 leading-relaxed whitespace-pre-wrap">{decryptedContent}</p>
+                  <p className="text-gray-800 leading-relaxed whitespace-pre-wrap break-words overflow-hidden">{decryptedContent}</p>
                 </div>
               ) : (
                 <div className="bg-yellow-50 border border-yellow-200 p-4 rounded-lg">
