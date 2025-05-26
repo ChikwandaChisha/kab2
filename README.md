@@ -63,11 +63,8 @@ yarn install
 ```
 
 3. Set up environment variables
-Create a `.env` file in the root directory with the following variables:
-```
-VITE_SUPABASE_URL=your_supabase_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
+
+To make the backend setup easier, the Supabase configuration is already set up in the codebase at `src/integrations/supabase/client.ts`. No additional environment variables are needed to run the application.
 
 4. Start the development server
 ```sh
