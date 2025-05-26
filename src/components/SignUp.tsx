@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -163,7 +162,6 @@ export const SignUp = ({ onToggleView }: SignUpProps) => {
             <SelectContent>
               <SelectItem value="User">User</SelectItem>
               <SelectItem value="Moderator">Moderator</SelectItem>
-              <SelectItem value="Admin">Admin</SelectItem>
             </SelectContent>
           </Select>
         </div>

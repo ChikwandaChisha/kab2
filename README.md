@@ -115,3 +115,9 @@ For questions or support, please open an issue in the project repository.
 ## Acknowledgments
 
 We would like to acknowledge the assistance provided by lovable devf in the development of this project.
+
+## Access Information
+
+
+### Admin Access
+Note: The admin functionality was not fully implemented as it was not deemed necessary for the core functionality of the application. The admin role and related features are currently disabled.

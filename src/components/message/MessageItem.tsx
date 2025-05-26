@@ -1,5 +1,3 @@
-
-
 import { Message } from '@/types';
 import { useState } from 'react';
 import { DecryptButton } from './DecryptButton';
@@ -95,7 +93,7 @@ const MessageItem = ({ message, currentUserEmail, userRole }: MessageItemProps) 
 
       {showContent ? (
         <div className="mb-3">
-          <p className="text-gray-800">{displayContent}</p>
+          <p className="text-gray-800 break-words whitespace-pre-wrap overflow-hidden">{displayContent}</p>
         </div>
       ) : (
         <div className="mb-3">
