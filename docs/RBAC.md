@@ -47,9 +47,9 @@
 
 | Page/Route | User | Moderator | Admin |
 |------------|------|-----------|--------|
-| /messages | ✅ | ✅ | ✅ |
-| /send | ✅ | ✅ | ✅ |
-| /mod-panel | ❌ | ✅ | ✅ |
+| /messages | ✅ | ✅ | ❌ |
+| /send | ✅ | ✅ | ❌ |
+| /mod-panel | ❌ | ✅ | ❌ |
 | /admin-console | ❌ | ❌ | ✅ |
 
 Note: Moderators are automatically redirected to /mod-panel upon login, but can still access messaging pages if navigated to directly.

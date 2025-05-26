@@ -1,4 +1,3 @@
-
 import { Message } from '@/types';
 import MessageItem from './message/MessageItem';
 
