@@ -1,5 +1,5 @@
 # WhisperChain+ Secure Messaging Platform
-
+## Authors: Chikwanda Chisha and Patrick Bongo
 WhisperChain+ is an end-to-end encrypted messaging platform focused on privacy and security. This application allows users to send encrypted messages to other users, with features designed for secure communication and content moderation.
 
 ## Features
